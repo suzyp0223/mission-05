@@ -16,43 +16,44 @@
 </head>
 
 <body>
-  <header class="header">
-    <!-- 헤더 영역 -->
-    <!-- 대제목의 경우 "Coupang"으로 미리 마크업되어 있습니다. -->
-    <h1 class="sr-only">Coupang</h1>
-    <div class="header__inner">
-      <!-- 카테고리 버튼은 .header__inner 영역 안에 마크업 해주세요. -->
-      <button class="button--category"></button>
-      <span>카테고리</span>
-    </div>
-  </header>
+  <div class="wrap">
+    <header class="header">
+      <!-- 헤더 영역 -->
+      <!-- 대제목의 경우 "Coupang"으로 미리 마크업되어 있습니다. -->
+      <h1 class="sr-only">Coupang</h1>
+      <div class="header__inner">
+        <!-- 카테고리 버튼은 .header__inner 영역 안에 마크업 해주세요. -->
+        <button class="button--category"></button>
+        <span>카테고리</span>
+      </div>
+    </header>
 
-  <nav class="navigation">
-    <!-- 내비게이션 영역 -->
-    <!-- 내비게이션 제목 -->
-    <h4>종류별 전체 상품 리스트</h4>
+    <nav class="navigation">
+      <!-- 내비게이션 영역 -->
+      <!-- 내비게이션 제목 -->
+      <h4>종류별 전체 상품 리스트</h4>
 
-    <div class="navigation__inner">
-      <!-- 카테고리별 내비게이션(메뉴) 영역 -->
+      <div class="navigation__inner dep-wrap1">
+        <!-- 카테고리별 내비게이션(메뉴) 영역 -->
 
-      <ul class="navigation__list">
+        <ul class="navigation__list dep-1">
 
-        <li class="1depth">
-          <img src="./assets/iconfont/clothes.svg" alt="패션의류/잡화 이미지">
-          <a class="1depth-a" href="/" role="button">패션의류/잡화</a>
-          <div class="depth-wrap">
-            <ul>
+          <li class="dep-1-li">
+            <img src="./assets/iconfont/clothes.svg" alt="패션의류/잡화 이미지">
+            <a class="dep-1a" href="/" role="button">패션의류/잡화</a>
+            <!-- <div class="depth-wrap2"> -->
+            <ul class="dep-2">
               <li>
-                <a class="2depth-2" href="/" role="button">여성패션</a>
-                <div>
-                  <ul>
-                    <li><a href="">의류</a></li>
-                    <li><a href="">속옷/잠옷</a></li>
-                    <li><a href="">신발</a></li>
-                  </ul>
-                  <!-- //3depth -->
+                <a class="dep-2a" href="/" role="button">여성패션</a>
+                <!-- <div class="depth-wrap3"> -->
+                <ul class="dep-3">
+                  <li><a href="">의류</a></li>
+                  <li><a href="">속옷/잠옷</a></li>
+                  <li><a href="">신발</a></li>
+                </ul>
+                <!-- //3depth -->
 
-                </div>
+                <!-- </div> -->
               </li>
               <li>
                 <a href="">남성패션</a>
@@ -63,151 +64,152 @@
             </ul>
             <!-- //2depth -->
 
-          </div>
-        </li>
-        <!-- //1depth -->
+            <!-- </div> -->
+          </li>
+          <!-- //1depth -->
 
-        <li>
-          <img src="./assets/iconfont/beauty.svg" alt="뷰티 이미지">
-          <a class="1depth-a" href="/">뷰티</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/baby.svg" alt="출산유아동 이미지">
-          <a class="1depth-a" href="/">출산유아동</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/foods.svg" alt="식품 이미지">
-          <a class="1depth-a" href="/">식품</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/kitchenware.svg" alt="주방용품 이미지">
-          <a class="1depth-a" href="/">주방용품</a>
-        </li>
+          <li>
+            <img src="./assets/iconfont/beauty.svg" alt="뷰티 이미지">
+            <a class="dep-1a" href="/">뷰티</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/baby.svg" alt="출산유아동 이미지">
+            <a class="dep-1a" href="/">출산유아동</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/foods.svg" alt="식품 이미지">
+            <a class="dep-1a" href="/">식품</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/kitchenware.svg" alt="주방용품 이미지">
+            <a class="dep-1a" href="/">주방용품</a>
+          </li>
 
-        <li>
-          <img src="./assets/iconfont/houseware.svg" alt="생활용품 이미지">
-          <a class="1depth-a" href="/">생활용품</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/interior.svg" alt="홈인테리어 이미지">
-          <a class="1depth-a" href="/">홈인테리어</a>
-        </li>
+          <li>
+            <img src="./assets/iconfont/houseware.svg" alt="생활용품 이미지">
+            <a class="dep-1a" href="/">생활용품</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/interior.svg" alt="홈인테리어 이미지">
+            <a class="dep-1a" href="/">홈인테리어</a>
+          </li>
 
-        <li>
-          <img src="./assets/iconfont/appliances.svg" alt="가전디지털 이미지">
-          <a class="1depth-a" href="/">가전디지털</a>
-        </li>
+          <li>
+            <img src="./assets/iconfont/appliances.svg" alt="가전디지털 이미지">
+            <a class="dep-1a" href="/">가전디지털</a>
+          </li>
 
-        <li>
-          <img src="./assets/iconfont/sports.svg" alt="스포츠 이미지">
-          <a class="1depth-a" href="/">스포츠</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/car.svg" alt="자동차용품 이미지">
-          <a class="1depth-a" href="/">자동차용품</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/book.svg" alt="도서음반 이미지">
-          <a class="1depth-a" href="/">도서음반</a>
-        </li>
-        <img src="./assets/iconfont/toy.svg" alt="완구취미 이미지">
-        <a class="1depth-a" href="/">완구취미</a>
-        <li>
-          <img src="./assets/iconfont/stationery.svg" alt="문구오피스 이미지">
-          <a class="1depth-a" href="/">문구오피스</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/pet.svg" alt="반려동물 이미지">
-          <a class="1depth-a" href="/">반려동물</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/travel.svg" alt="여행티켓 이미지">
-          <a class="1depth-a" href="/">여행티켓</a>
-        </li>
-        <li>
-          <img src="./assets/iconfont/theme.svg" alt="테마관 이미지">
-          <a class="1depth-a" href="/">테마관</a>
-        </li>
-
-
-
-
+          <li>
+            <img src="./assets/iconfont/sports.svg" alt="스포츠 이미지">
+            <a class="dep-1a" href="/">스포츠</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/car.svg" alt="자동차용품 이미지">
+            <a class="dep-1a" href="/">자동차용품</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/book.svg" alt="도서음반 이미지">
+            <a class="dep-1a" href="/">도서음반</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/toy.svg" alt="완구취미 이미지">
+            <a class="dep-1a" href="/">완구취미</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/stationery.svg" alt="문구오피스 이미지">
+            <a class="dep-1a" href="/">문구오피스</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/pet.svg" alt="반려동물 이미지">
+            <a class="dep-1a" href="/">반려동물</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/travel.svg" alt="여행티켓 이미지">
+            <a class="dep-1a" href="/">여행티켓</a>
+          </li>
+          <li>
+            <img src="./assets/iconfont/theme.svg" alt="테마관 이미지">
+            <a class="dep-1a" href="/">테마관</a>
+          </li>
 
 
 
+
+
+
+
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main">
+      <!-- 메인 콘텐츠 영역 -->
+      <!-- 해당 영역은 추가적인 마크업없이 비워놓아 주세요. -->
+    </main>
+
+    <footer class="footer">
+      <!-- 푸터 영역 -->
+      <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
+      <ul>
+        <li><a href="/">인재채용</a></li>
+        <li><a href="/">입점 / 제휴문의</a></li>
+        <li><a href="/">공지사항</a></li>
+        <li><a href="/">고객의 소리</a></li>
+        <li><a href="/"><strong>개인정보 처리방침</strong></a></li>
+        <li><a href="/">쿠팡페이 이용약관</a></li>
+        <li><a href="/"><strong>쿠팡페이 개인정보 처리방침</strong></a></li>
+        <li><a href="/">신뢰관리센터</a></li>
+        <li><a href="/">제휴마케팅</a></li>
+        <li><a href="/">광고안내</a></li>
       </ul>
-    </div>
-  </nav>
+      <div class="footer-info">
+        <a href="/">Coupang</a>
+        <div class="address">
+          <address>
+            상호명 및 호스팅 서비스 제공 : 쿠팡(주)
+            <br>
+            대표이사 : 강한승, 박대준
+            <br>
+            서울시 송파구 송파대로 570
+            <br>
+            사업자 등록번호 : 120-88-00767
+            <br>
+            통신판매업신고 : 2017-서울송파-0680
+          </address>
 
-  <main class="main">
-    <!-- 메인 콘텐츠 영역 -->
-    <!-- 해당 영역은 추가적인 마크업없이 비워놓아 주세요. -->
-  </main>
+        </div>
+        <div class="contact">
+          <strong>365고객센터</strong>
+          <p>전자금융거래분쟁처리담당</p>
+          <a href="tel:1577-7011"></a>
+          <address>서울시 송파구 송파대로 570</address>
+          <a href="mailto:help@coupang.com?subject=문의사항" target="_blank"></a>
+        </div>
+        <div class="notice">
+          <strong>우리은행 채무지급보증 안내</strong>
+          <span>당사는 고객님이 현금 결제한 금액에 대해
+            우리은행과 채무지급보증 계약을 체결하여
+            안전거래를 보장하고 있습니다.</span>
+        </div>
+      </div>
+      <div class="copyRight">
+        <div>
+          <span>사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+            마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.
+            쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.
+            쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터<p>(CM112@coupang.com)</p>를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁처리절차에 의거 분쟁이 처리됩니다.
+            <p>Copyright ⓒ Coupang Corp. 2010-2020 All Right Reserved.</p>
+          </span>
+        </div>
+        <div>
+          <a href="/" target="_blank" rel="noopener"><img src="" alt="페이스북"></a>
+          <a href="/" target="_blank" rel="noopener"><img src="" alt="네이버블로그"></a>
+          <a href="/" target="_blank" rel="noopener"><img src="" alt="인스타그램"></a>
+        </div>
+      </div>
 
-  <footer class="footer">
-    <!-- 푸터 영역 -->
-    <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
-    <ul>
-      <li><a href="/">인재채용</a></li>
-      <li><a href="/">입점 / 제휴문의</a></li>
-      <li><a href="/">공지사항</a></li>
-      <li><a href="/">고객의 소리</a></li>
-      <li><a href="/"><strong>개인정보 처리방침</strong></a></li>
-      <li><a href="/">쿠팡페이 이용약관</a></li>
-      <li><a href="/"><strong>쿠팡페이 개인정보 처리방침</strong></a></li>
-      <li><a href="/">신뢰관리센터</a></li>
-      <li><a href="/">제휴마케팅</a></li>
-      <li><a href="/">광고안내</a></li>
-    </ul>
-    <div class="footer-info">
-      <a href="/">Coupang</a>
-      <!-- <a href="mailto:help@coupang.com?subject=문의사항" target="_blank"></a>
-      <a href="tel:1577-7011"></a>
-      <a href="" target="_blank" rel="noopener"></a> -->
-      <div>
-        <address>
-          상호명 및 호스팅 서비스 제공 : 쿠팡(주)
-          <br>
-          대표이사 : 강한승, 박대준
-          <br>
-          서울시 송파구 송파대로 570
-          <br>
-          사업자 등록번호 : 120-88-00767
-          <br>
-          통신판매업신고 : 2017-서울송파-0680
-        </address>
-
-      </div>
-      <div>
-        <strong>365고객센터</strong>
-        <p>전자금융거래분쟁처리담당</p>
-        <a href="tel:1577-7011"></a>
-        <address>서울시 송파구 송파대로 570</address>
-        <a href="mailto:help@coupang.com?subject=문의사항" target="_blank"></a>
-      </div>
-      <div class="notice">
-        <strong>우리은행 채무지급보증 안내</strong>
-        <span>당사는 고객님이 현금 결제한 금액에 대해
-          우리은행과 채무지급보증 계약을 체결하여
-          안전거래를 보장하고 있습니다.</span>
-      </div>
-    </div>
-    <div class="copyRight">
-      <div>
-        <span>사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
-          마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.
-          쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.
-          쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터<p>(CM112@coupang.com)</p>를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁처리절차에 의거 분쟁이 처리됩니다.
-          <p>Copyright ⓒ Coupang Corp. 2010-2020 All Right Reserved.</p></span>
-      </div>
-      <div>
-        <a href="/" target="_blank" rel="noopener"><img src="" alt="페이스북"></a>
-        <a href="/" target="_blank" rel="noopener"><img src="" alt="네이버블로그"></a>
-        <a href="/" target="_blank" rel="noopener"><img src="" alt="인스타그램"></a>
-      </div>
-    </div>
-
-  </footer>
+    </footer>
+  </div>
 </body>
 
 </html>

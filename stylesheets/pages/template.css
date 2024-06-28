@@ -3,19 +3,148 @@ body {
 
   width: 1200px;
   height: 1024px;
-
-
   margin: 0 auto;
+
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+
 }
 
 /* ---------------------------------------------- */
 /* 헤더                                            */
 /* ---------------------------------------------- */
+.header__inner {
+  width: 110px;
+  height: 116px;
+  background: var(--blue-600, #0074E9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--category {
+  width: 30px;
+  height: 30px;
+  background: url(../../assets/icon/hamburger.svg) no-repeat center;
+}
+
+.header__inner span {
+  margin-top: 12px;
+  color: white;
+}
 
 
 /* ---------------------------------------------- */
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
+.navigation {
+  outline: 1px solid rgb(155, 0, 152);
+
+  width: 540px;
+  height: 500px;
+  position: relative;
+}
+
+h4 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.navigation ul {
+  width: 180px;
+  height: 500px;
+  background: var(--Grayscale-white-white, #f08a78e7);
+  padding: 10px 5px;
+
+}
+
+.dep-2 {
+  position: absolute;
+  top: 0;
+  left: 180px;
+
+}
+
+.dep-3 {
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
+.navigation li {
+  outline: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+
+  width: 170px;
+  height: 30px;
+
+
+
+}
+
+.navigation img {
+  /* padding: 5px 0 20px; */
+  /* display: inline; */
+
+}
+
+.navigation a {
+  display: block;
+  padding: 5px 50px 5px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navigation__inner .dep-1 .dep-1a {
+  display: block;
+}
+.navigation__inner .dep-1 > li:hover > ul {
+  display: block;
+}
+.navigation__inner .dep-2 > li:hover > ul {
+  display: block;
+}
+
+
+
+.navigation__inner .dep-2,
+.navigation__inner .dep-3 {
+  display: none;
+} */
+
+
+
+
+
+
+
 
 
 /* ---------------------------------------------- */
@@ -37,5 +166,35 @@ body {
 
 footer {
   outline: 1px solid darkgray;
+
   height: 349px;
+}
+
+footer ul {
+  outline: 1px solid rgb(61, 50, 44);
+
+  background: var(--color-gray-200);
+
+
+  height: 40px;
+
+}
+
+
+
+footer .footer-info {
+  outline: 1px solid rgb(159, 13, 192);
+  height: 143px;
+}
+
+
+
+
+
+footer .copyRight {
+  outline: 1px solid rgb(213, 231, 59);
+
+  background: var(--color-gray-300);
+  color: var(--color-white);
+  height: 102px;
 }
