@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gnb 테스트</title>
+  <link rel="stylesheet" href="/content/css/reset.css" />
+  <link rel="stylesheet" href="/content/css/common.css" />
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    .inner {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gnb_wrapper {
+      position: relative;
+    }
+
+    .gnb_wrapper ul li a {
+      font-size: 1.6rem;
+      line-height: 40px;
+      border-bottom: 1px solid #000;
+      display: block;
+      padding-left: 20px;
+    }
+
+    .gnb_wrapper ul .li-hover>a {
+      background-color: #ddd;
+    }
+
+    .depth_list {
+      display: inline-flex;
+      flex-direction: column;
+      width: 400px;
+      max-height: 140px;
+      overflow-y: auto;
+    }
+
+    .depth_list div {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 400px;
+    }
+
+    .depth_list .li-hover>div {
+      display: block;
+    }
+
+    .depth_list {
+      /* firefox */
+      scrollbar-width: thin;
+      scrollbar-color: gray transparent;
+    }
+
+    .depth_list::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 6px;
+      background-color: transparent;
+    }
+
+    .depth_list::-webkit-scrollbar-thumb {
+      width: 6px;
+      border-radius: 6px;
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="inner">
+    <div class="gnb_wrapper">
+      <ul class="depth_list depth_01">
+        <li>
+          <a href="">01-01 카테고리</a>
+          <div class="depth_wrap">
+            <ul class="depth_list depth_02">
+              <li>
+                <a href="">02-01 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-02 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-03 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-04 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-05 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-06 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">01-02 카테고리</a>
+          <div class="depth_wrap">
+            <ul class="depth_list depth_02">
+              <li>
+                <a href="">02-01 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-02 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-03 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-04 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-05 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-06 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">01-03 카테고리</a>
+          <div class="depth_wrap">
+            <ul class="depth_list depth_02">
+              <li>
+                <a href="">02-01 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-02 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-03 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-04 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-05 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-06 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">01-04 카테고리</a>
+          <div class="depth_wrap">
+            <ul class="depth_list depth_02">
+              <li>
+                <a href="">02-01 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-02 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-03 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-04 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-05 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-06 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="">01-05 카테고리</a>
+          <div class="depth_wrap">
+            <ul class="depth_list depth_02">
+              <li>
+                <a href="">02-01 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-02 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-03 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-04 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-05 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="">02-06 카테고리</a>
+                <div class="depth_wrap">
+                  <ul class="depth_list depth_03">
+                    <li><a href="">03-01 카테고리</a></li>
+                    <li><a href="">03-02 카테고리</a></li>
+                    <li><a href="">03-03 카테고리</a></li>
+                    <li><a href="">03-04 카테고리</a></li>
+                    <li><a href="">03-05 카테고리</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    //gnb
+    $(".depth_01 li").mouseenter(function (e) {
+      $(this).addClass("li-hover");
+      $(this).siblings().removeClass("li-hover");
+    });
+    $(".depth_02 li").mouseenter(function (e) {
+      $(this).addClass("li-hover");
+      $(this).siblings().removeClass("li-hover");
+      $(this).parent("li").addClass("li-hover");
+    });
+    $(".depth_03 li").mouseenter(function (e) {
+      $(this).addClass("li-hover");
+      $(this).siblings().removeClass("li-hover");
+      $(this).parent("li").addClass("li-hover");
+      $(this).parent("li").parent("li").addClass("li-hover");
+    });
+  </script>
+</body>
+
+</html>
