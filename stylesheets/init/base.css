@@ -57,6 +57,9 @@ h6 {
   font-size: 13px;
   font-weight: normal;
 }
+strong {
+  color: var(--color-gray-800);
+}
 
 /* 테두리 초기화 */
 img,
