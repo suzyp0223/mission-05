@@ -1,6 +1,4 @@
 body {
-  outline: 1px solid coral;
-
   width: 1200px;
   height: 1024px;
   margin: 0 auto;
@@ -42,12 +40,20 @@ body {
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
 .navigation {
-  outline: 1px solid rgb(155, 0, 152);
-
   width: 540px;
   height: 500px;
   position: relative;
+  box-shadow: 1px 4px 3px 0px var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
 }
+
+.navigation::before {
+  content: '';
+  width: 540px;
+  height: 500px;
+  box-shadow: -1px 4px 3px 0px var(--color-gray-300);
+}
+
 
 h4 {
   position: absolute;
@@ -60,26 +66,56 @@ h4 {
 .navigation ul {
   width: 180px;
   height: 500px;
-  background: var(--Grayscale-white-white, #f08a78e7);
-  padding: 10px 5px;
+  padding: 10px 0;
 
+  font-family: "Noto Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
 }
 
-.dep-2 {
+/* .navigation .dep-2::before { */
+  /* display: inline-block;
+  content: '';
+  width: 180px;
+  height: 500px;
+  /* box-shadow: -2px 3px 3px 0px var(--color-gray-200); */
+  /* box-shadow: -2px 3px 3px 0px red; */
+/* } */
+
+ .dep-2 {
   position: absolute;
+  display: inline-block;
   top: 0;
   left: 180px;
 
+}
+
+.dep-2::after {
+  content: '';
+  width: 180px;
+  height: 500px;
+  box-shadow: 2px 3px 3px 0px red;
 }
 
 .dep-3 {
   position: absolute;
+
   top: 0;
   left: 180px;
 }
 
+.dep-3::after {
+
+  /* content: '';
+  width: 180px;
+  height: 500px;
+  box-shadow: 2px 3px 3px 0px red; */
+}
+
 .navigation li {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -87,32 +123,72 @@ h4 {
 
   width: 170px;
   height: 30px;
-
-
-
 }
 
-.navigation img {
-  /* padding: 5px 0 20px; */
-  /* display: inline; */
+.dep-2 li {
+  padding: 1px 0px 1px 20px;
+}
 
+
+
+.navigation i {
+  margin-left: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
 }
 
 .navigation a {
   display: block;
-  padding: 5px 50px 5px 5px;
+  padding: 5px 40px 5px 0px;
 }
 
+ul>li:first-child>a {
+  color: var(--blue-600, #0074E9);
 
+  font-family: "Noto Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
 
+/* ul>li:first-child>a:not(.dep-3a) {
+  background: url(../../assets/icon/more-right-active.svg) no-repeat center;
+  width: 30px;
+  height: 30px;
+  
+} */
+ul>li:first-child .arrow::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 140px;
+  background: url(../../assets/icon/more-right-active.svg) no-repeat center;
+  width: 30px;
+  height: 30px;
+}
 
+.dep-2a::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 140px;
+  background: url(../../assets/icon/more-right-active.svg) no-repeat center;
+  width: 30px;
+  height: 30px;
+}
 
-
-
-
-
-
-
+.dep-1>li:last-child::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url(../../assets/icon/new.svg) no-repeat;
+  padding-right: 78px;
+  position: absolute;
+  top: auto;
+  left: 80px;
+}
 
 
 
@@ -153,7 +229,7 @@ h4 {
 /* 메인 콘텐츠 영역의 최소 높이 설정 */
 .main {
   min-height: 52rem;
-  outline: 1px solid rgb(92, 205, 135);
+  /* outline: 1px solid rgb(92, 205, 135); */
 
 
 }
