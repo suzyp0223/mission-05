@@ -28,6 +28,18 @@ body {
   background: url(/assets/icon/hamburger.svg) no-repeat center;
 }
 
+/* focus only */
+.button--category:focus-visible {
+  outline: none;
+  outline: 1px solid var(--color-red-500);
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px var(--color-red-500),
+    1px 1px 1px 1px inset var(--color-red-500);
+  width: 110px;
+  height: 142px;
+  margin: -56px;
+}
+
 .header__inner span {
   margin-top: 12px;
   color: white;
@@ -41,16 +53,6 @@ body {
   width: 540px;
   height: 500px;
   position: relative;
-  box-shadow: 1px 4px 3px 0px var(--color-gray-300);
-  border: 1px solid var(--color-gray-200);
-}
-
-h4 {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 
 .navigation ul {
@@ -62,19 +64,39 @@ h4 {
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+  border: 1px solid var(--color-gray-200);
+}
+
+.dep-1 {
+  box-shadow: -1px 4px 3px 0px var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
+}
+
+.dep-1-li:nth-of-type(1):hover .dep-2,
+.dep-1-li:nth-of-type(1):focus .dep-2 {
+  opacity: 1;
 }
 
 .dep-2 {
   position: absolute;
   top: 0;
   left: 180px;
+  opacity: 0;
 }
 
+/* !!!
+가상요소 추가후 
+a태그 선택이 안됩니다. 가상요소 없이 dep-2( 2depth )에 
+box-shadow, border를 넣어도 '여성패션'에 그림자라인이 생깁니다.
+여성패션이 선택되지않아 '여성의류/잡화 접근시 dep-2, dep-3 동시에
+나타납니다.
+ */
 .dep-2::before {
   content: '';
   width: 180px;
   height: 500px;
-  box-shadow: -2px 3px 3px 0px var(--color-gray-300);
+  box-shadow: -1px 3px 2px 0px var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
   display: block;
   position: absolute;
   top: 0;
@@ -84,7 +106,7 @@ h4 {
   content: '';
   width: 180px;
   height: 500px;
-  box-shadow: 2px 3px 3px 0px var(--color-gray-300);
+  box-shadow: 1px 2px 2px 0px var(--color-gray-300);
   display: block;
   position: absolute;
   top: 0;
@@ -94,6 +116,8 @@ h4 {
   position: absolute;
   top: 0;
   left: 180px;
+  box-shadow: 1px 4px 3px 0px var(--color-gray-300);
+  border: 1px solid var(--color-gray-200);
 }
 
 .navigation li {
@@ -101,7 +125,6 @@ h4 {
   flex-wrap: wrap;
   align-items: center;
   align-content: space-around;
-
   width: 170px;
   height: 30px;
 }
@@ -117,18 +140,14 @@ h4 {
   font-size: 20px;
 }
 
+.navigation ul:first-child li:first-child>i+a {
+  display: block;
+  padding: 7px 33px 7px 2px;
+}
+
 .navigation a {
   display: block;
   padding: 5px 40px 5px 0px;
-}
-
-.navigation ul>li:first-child>a {
-  color: var(--color-blue-600);
-  font-family: "Noto Sans";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
 }
 
 .navigation ul>li:first-child .arrow::after {
@@ -162,7 +181,14 @@ h4 {
   left: 80px;
 }
 
-
+.navigation ul>li:first-child>a {
+  color: var(--color-blue-600);
+  font-family: "Noto Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
 
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
@@ -323,18 +349,23 @@ footer .copyRight {
   height: 102px;
   padding: 10px 0;
 }
+
 .copyRight p {
   display: inline;
 }
+
 .copyRight a {
   padding-top: 35px;
 }
+
 .copyRight .facebook-img {
   padding-left: 30px;
 }
+
 .copyRight-inner .blog-img {
   padding: 0 10px;
 }
+
 .copyRight-inner .instar-img {
   background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
   background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);

@@ -18,11 +18,8 @@
 <body>
   <div class="wrap">
     <header class="header">
-      <!-- 헤더 영역 -->
-      <!-- 대제목의 경우 "Coupang"으로 미리 마크업되어 있습니다. -->
       <h1 class="sr-only">Coupang</h1>
       <div class="header__inner">
-        <!-- 카테고리 버튼은 .header__inner 영역 안에 마크업 해주세요. -->
         <button class="button--category"></button>
         <span>카테고리</span>
       </div>
@@ -31,40 +28,34 @@
     <nav class="navigation">
       <!-- 내비게이션 영역 -->
       <!-- 내비게이션 제목 -->
-      <h4>종류별 전체 상품 리스트</h4>
-
+      <h4 class="sr-only">종류별 전체 상품 리스트</h4>
       <div class="navigation__inner dep-wrap1">
         <!-- 카테고리별 내비게이션(메뉴) 영역 -->
 
-        <ul class="navigation__list dep-1">
-
+        <ul class="navigation__list dep-1 is--active">
           <li class="dep-1-li">
             <i class="icon-clothes"></i>
-            <a class="dep-1a arrow" href="/" role="button">패션의류/잡화</a>
-            <!-- <div class="depth-wrap2"> -->
-            <ul class="dep-2">
+            <a class="dep-1a arrow" href="/" role="button" tabindex="0">패션의류/잡화</a>
+            <ul class="dep-2 is--active">
               <li>
-                <a class="dep-2a" href="/" role="button">여성패션</a>
-                <!-- <div class="depth-wrap3"> -->
+                <a class="dep-2a" href="/" role="button" tabindex="0">여성패션</a>
                 <ul class="dep-3">
-                  <li><a class="dep-3a" href="">의류</a></li>
-                  <li><a href="">속옷/잠옷</a></li>
-                  <li><a href="">신발</a></li>
+                  <li><a class="dep-3a" href="/">의류</a></li>
+                  <li><a href="/">속옷/잠옷</a></li>
+                  <li><a href="/">신발</a></li>
                 </ul>
                 <!-- //3depth -->
 
-                <!-- </div> -->
               </li>
               <li>
-                <a href="">남성패션</a>
+                <a href="/">남성패션</a>
               </li>
               <li>
-                <a href="">유아동패션</a>
+                <a href="/">유아동패션</a>
               </li>
             </ul>
             <!-- //2depth -->
 
-            <!-- </div> -->
           </li>
           <!-- //1depth -->
 
@@ -128,25 +119,16 @@
             <i class="icon-theme"></i>
             <a class="dep-1a" href="/">테마관</a>
           </li>
-
-
-
-
-
-
-
         </ul>
       </div>
     </nav>
 
     <main class="main">
       <!-- 메인 콘텐츠 영역 -->
-      <!-- 해당 영역은 추가적인 마크업없이 비워놓아 주세요. -->
     </main>
 
     <footer class="footer">
       <!-- 푸터 영역 -->
-      <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
       <ul>
         <li><a href="/">인재채용</a></li>
         <span class=”divider” aria-hidden="true">ㅣ</span>
@@ -185,7 +167,7 @@
           <p>&nbsp;전자금융거래분쟁처리담당</p>
           <a href="tel:1577-7011">1577-7011</a>
           <address>서울시 송파구 송파대로 570</address>
-          <a href="mailto:help@coupang.com?subject=문의사항" target="_blank">email : help@coupang.com</a>
+          <a href="mailto:help@coupang.com?subject=문의사항" target="_blank" rel="noopener">email : help@coupang.com</a>
         </div>
         <div class="notice">
           <strong>우리은행 채무지급보증 안내</strong>
