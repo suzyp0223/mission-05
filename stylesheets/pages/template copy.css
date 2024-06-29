@@ -45,6 +45,12 @@ body {
   border: 1px solid var(--color-gray-200);
 }
 
+.navigation::before {
+  content: '';
+  width: 540px;
+  height: 500px;
+}
+
 h4 {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -247,8 +253,9 @@ footer .footer-info {
   gap: 40px;
   position: relative;
   background: url(/assets/logo/logo-mono.svg) no-repeat;
-  background-position: 0% 23%;
+  background-position: 0% 20%;
   color: var(--gray-800, #4E4E4E);
+  /* padding: 32px 0; */
   font-family: "Noto Sans";
   font-size: 16px;
   font-style: normal;
@@ -276,8 +283,7 @@ footer .footer-info {
   width: 1px;
   height: 12px;
   border-right: 1px solid var(--color-gray-800);
-  padding-right: 10px;
-  display: inline-block;
+  padding-right: 13px;
 }
 
 .contact p {
@@ -306,6 +312,7 @@ footer .footer-info {
 footer .copyRight {
   background: var(--color-gray-900);
   width: 1200px;
+  height: 120px;
 }
 
 .copyRight>div {
@@ -318,23 +325,24 @@ footer .copyRight {
   color: var(--color-white);
   width: 1028px;
   display: flex;
-  align-items: center;
-  margin: 0px 89px;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 89px;
   height: 102px;
-  padding: 10px 0;
 }
+
 .copyRight p {
   display: inline;
 }
-.copyRight a {
-  padding-top: 35px;
-}
+
 .copyRight .facebook-img {
   padding-left: 30px;
 }
+
 .copyRight-inner .blog-img {
   padding: 0 10px;
 }
+
 .copyRight-inner .instar-img {
   background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
   background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
